@@ -20,7 +20,7 @@ const Portfolio = () => {
       category: "SaaS"
     },
     {
-      title: "Sistema de Automação Industrial",
+      title: "AgendaClin - Sistema de Gestão de Agenda Clinica",
       description: "Solução IoT para monitoramento e controle automatizado de processos industriais.",
       image: portfolioImage,
       technologies: ["React", "NestJs", "PostgreSQL", "Docker"],
