@@ -45,16 +45,16 @@ const Hero = () => {
               <Button 
                 size="lg"
                 onClick={() => scrollToSection("contato")}
-                className="bg-primary hover:bg-primary-dark text-primary-foreground shadow-soft group"
+                variant="hero"
+                className="shadow-soft group"
               >
                 Solicitar Orçamento
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
                 size="lg"
-                variant="outline"
+                variant="outline-white"
                 onClick={() => scrollToSection("portfolio")}
-                className="border-white/30 text-white hover:bg-white/10"
               >
                 <Play className="mr-2 h-5 w-5" />
                 Conhecer Soluções

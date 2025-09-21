@@ -190,7 +190,8 @@ const Contact = () => {
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full bg-primary hover:bg-primary-dark text-primary-foreground group"
+                    variant="hero"
+                    className="w-full group"
                   >
                     Enviar Mensagem
                     <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -251,8 +252,7 @@ const Contact = () => {
                   Entre em contato via WhatsApp para atendimento imediato.
                 </p>
                 <Button 
-                  variant="outline" 
-                  className="border-white/30 text-white hover:bg-white/10"
+                  variant="outline-white"
                 >
                   <MessageSquare className="mr-2 h-4 w-4" />
                   WhatsApp

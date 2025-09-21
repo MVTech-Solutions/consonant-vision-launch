@@ -115,8 +115,8 @@ const Portfolio = () => {
                     </div>
 
                     <Button 
-                      variant="outline" 
-                      className="w-fit border-white/30 text-white hover:bg-white/10"
+                      variant="outline-white"
+                      className="w-fit"
                     >
                       Ver Detalhes
                       <ExternalLink className="ml-2 h-4 w-4" />

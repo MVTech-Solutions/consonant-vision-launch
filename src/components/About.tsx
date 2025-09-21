@@ -86,7 +86,8 @@ const About = () => {
             <div className="pt-4">
               <Button 
                 onClick={() => scrollToSection("portfolio")}
-                className="bg-primary hover:bg-primary-dark text-primary-foreground group"
+                variant="hero"
+                className="group"
               >
                 Ver Nosso Portfolio
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

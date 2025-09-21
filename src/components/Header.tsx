@@ -62,7 +62,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Button 
               onClick={() => scrollToSection("contato")}
-              className="bg-primary hover:bg-primary-dark text-primary-foreground"
+              variant="hero"
             >
               Solicitar Orçamento
             </Button>
@@ -113,7 +113,8 @@ const Header = () => {
               </button>
               <Button 
                 onClick={() => scrollToSection("contato")}
-                className="w-full mt-4 bg-primary hover:bg-primary-dark text-primary-foreground"
+                variant="hero"
+                className="w-full mt-4"
               >
                 Solicitar Orçamento
               </Button>
