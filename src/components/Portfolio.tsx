@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Code, Users, TrendingUp } from "lucide-react";
 import portfolioImage from "@/assets/portfolio-saas.jpg";
 import cornPlantation from "@/assets/corn-plantation.jpg";
+import clinicFrontdesk from "@/assets/clinic-frontdesk.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -22,7 +23,7 @@ const Portfolio = () => {
     {
       title: "AgendaClin - Sistema de Gestão de Agenda Clinica",
       description: "Solução IoT para monitoramento e controle automatizado de processos industriais.",
-      image: portfolioImage,
+      image: clinicFrontdesk,
       technologies: ["React", "NestJs", "PostgreSQL", "Docker"],
       results: [
         "80% redução de falhas",
