@@ -26,7 +26,7 @@ const Portfolio = () => {
       image: clinicFrontdesk,
       technologies: ["React", "NestJs", "PostgreSQL", "Docker"],
       results: [
-        "80% redução de falhas",
+        "50% de aumento nos agendamentos",
         "25% economia de energia",
         "Monitoramento 24/7"
       ],
