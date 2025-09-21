@@ -105,13 +105,13 @@ const Portfolio = () => {
                         Resultados
                       </h4>
                       <ul className="space-y-2">
-                        {project.results.map((result, resultIndex) => (
+                         {project.results.map((result, resultIndex) => (
                           <li key={resultIndex} className="flex items-center text-blue-200">
                             <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                             {result}
-                          </li>
-                        ))}
-                      </ul>
+                           </li>
+                         ))}
+                       </ul>
                     </div>
 
                     <Button 
