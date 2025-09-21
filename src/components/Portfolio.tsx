@@ -10,7 +10,7 @@ const Portfolio = () => {
       title: "Ceres - Sistema de Gestão Agroempresarial",
       description: "Plataforma completa para gestão de produção com módulos financeiro e recursos humanos.",
       image: portfolioImage,
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
+      technologies: ["React", ".NET", "PostgreSQL", "AWS"],
       results: [
         "40% redução no tempo de processos",
         "Aumento de 60% na produtividade",
