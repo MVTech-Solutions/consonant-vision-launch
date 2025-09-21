@@ -134,7 +134,7 @@ const Portfolio = () => {
         <div className="mt-20 text-center">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-primary">50+</div>
+              <div className="text-4xl font-bold text-primary">20+</div>
               <div className="text-blue-200">Projetos Entregues</div>
             </div>
             <div className="space-y-2">
