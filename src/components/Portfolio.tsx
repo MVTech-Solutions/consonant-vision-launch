@@ -22,7 +22,7 @@ const Portfolio = () => {
       title: "Sistema de Automação Industrial",
       description: "Solução IoT para monitoramento e controle automatizado de processos industriais.",
       image: portfolioImage,
-      technologies: ["React", "NestJs", "InfluxDB", "Docker"],
+      technologies: ["React", "NestJs", "PostgreSQL", "Docker"],
       results: [
         "80% redução de falhas",
         "25% economia de energia",
