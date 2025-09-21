@@ -3,14 +3,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Code, Users, TrendingUp } from "lucide-react";
 import portfolioImage from "@/assets/portfolio-saas.jpg";
-import farmImage from "@/assets/farm-image.jpg";
+import cornPlantation from "@/assets/corn-plantation.jpg";
 
 const Portfolio = () => {
   const projects = [
     {
       title: "Ceres - Sistema de Gestão Agroempresarial",
       description: "Plataforma completa para gestão de produção com módulos financeiro e recursos humanos.",
-      image: farmImage,
+      image: cornPlantation,
       technologies: ["React", ".NET", "PostgreSQL", "AWS"],
       results: [
         "40% redução no tempo de processos",
