@@ -2,35 +2,29 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Users, Trophy, Target } from "lucide-react";
 import teamImage from "@/assets/team-image.jpg";
-
 const About = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  const values = [
-    {
-      icon: Users,
-      title: "Colaboração",
-      description: "Trabalhamos em parceria próxima com nossos clientes"
-    },
-    {
-      icon: Trophy,
-      title: "Excelência",
-      description: "Buscamos sempre a melhor qualidade em tudo que fazemos"
-    },
-    {
-      icon: Target,
-      title: "Resultados",
-      description: "Focamos em gerar valor real para o negócio dos clientes"
-    }
-  ];
-
-  return (
-    <section id="sobre" className="py-20 bg-background">
+  const values = [{
+    icon: Users,
+    title: "Colaboração",
+    description: "Trabalhamos em parceria próxima com nossos clientes"
+  }, {
+    icon: Trophy,
+    title: "Excelência",
+    description: "Buscamos sempre a melhor qualidade em tudo que fazemos"
+  }, {
+    icon: Target,
+    title: "Resultados",
+    description: "Focamos em gerar valor real para o negócio dos clientes"
+  }];
+  return <section id="sobre" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main About Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
@@ -55,10 +49,7 @@ const About = () => {
                 <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Expertise Técnica</h4>
-                  <p className="text-muted-foreground">
-                    Domínio completo das tecnologias mais modernas do mercado, incluindo 
-                    React, Node.js, Python, AWS e muito mais.
-                  </p>
+                  <p className="text-muted-foreground">Domínio completo das tecnologias mais modernas do mercado, incluindo React, Node.js, .Net, Java, AWS e muito mais.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -84,11 +75,7 @@ const About = () => {
             </div>
 
             <div className="pt-4">
-              <Button 
-                onClick={() => scrollToSection("portfolio")}
-                variant="hero"
-                className="group"
-              >
+              <Button onClick={() => scrollToSection("portfolio")} variant="hero" className="group">
                 Ver Nosso Portfolio
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -98,11 +85,7 @@ const About = () => {
           {/* Right Column - Image */}
           <div className="relative">
             <div className="relative rounded-lg overflow-hidden shadow-card">
-              <img 
-                src={teamImage} 
-                alt="Equipe Consonant Solutions"
-                className="w-full h-auto object-cover"
-              />
+              <img src={teamImage} alt="Equipe Consonant Solutions" className="w-full h-auto object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent"></div>
             </div>
             
@@ -121,9 +104,8 @@ const About = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => {
-              const IconComponent = value.icon;
-              return (
-                <div key={index} className="space-y-4">
+            const IconComponent = value.icon;
+            return <div key={index} className="space-y-4">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                     <IconComponent className="h-8 w-8 text-primary" />
                   </div>
@@ -133,14 +115,11 @@ const About = () => {
                   <p className="text-muted-foreground">
                     {value.description}
                   </p>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
