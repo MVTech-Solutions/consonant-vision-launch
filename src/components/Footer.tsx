@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { Mail, Phone, MapPin, Linkedin, Github, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,9 +24,9 @@ const Footer = () => {
       { name: "Contato", href: "#contato" }
     ],
     social: [
-      { icon: Linkedin, href: "#", label: "LinkedIn" },
-      { icon: Github, href: "#", label: "GitHub" },
-      { icon: MessageSquare, href: "#", label: "WhatsApp" }
+      { icon: Instagram, href: "#", label: "Instagram" },
+      { icon: Facebook, href: "#", label: "Facebook" },
+      { icon: Youtube, href: "#", label: "YouTube" }
     ]
   };
 

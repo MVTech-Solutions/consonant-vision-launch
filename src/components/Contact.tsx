@@ -12,8 +12,9 @@ import {
   Clock,
   Send,
   MessageSquare,
-  Linkedin,
-  Github
+  Instagram,
+  Facebook,
+  Youtube
 } from "lucide-react";
 
 const Contact = () => {
@@ -83,9 +84,9 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: MessageSquare, href: "#", label: "WhatsApp" }
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Youtube, href: "#", label: "YouTube" }
   ];
 
   return (
