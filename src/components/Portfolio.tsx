@@ -138,7 +138,7 @@ const Portfolio = () => {
               <div className="text-blue-200">Projetos Entregues</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-primary">98%</div>
+              <div className="text-4xl font-bold text-primary">90%</div>
               <div className="text-blue-200">Taxa de Satisfação</div>
             </div>
             <div className="space-y-2">
