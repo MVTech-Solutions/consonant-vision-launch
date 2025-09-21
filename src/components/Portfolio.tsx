@@ -34,7 +34,7 @@ const Portfolio = () => {
       title: "E-commerce B2B Personalizado",
       description: "Plataforma de e-commerce B2B com funcionalidades avançadas de gestão de pedidos e clientes.",
       image: portfolioImage,
-      technologies: ["Vue.js", "NestJs", "MySQL", "Redis"],
+      technologies: ["Vue.js", "NestJs", "PostgreSQL", "Redis"],
       results: [
         "150% aumento nas vendas",
         "50% redução no tempo de pedidos",
