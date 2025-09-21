@@ -7,7 +7,7 @@ import portfolioImage from "@/assets/portfolio-saas.jpg";
 const Portfolio = () => {
   const projects = [
     {
-      title: "SaaS de Gestão Empresarial",
+      title: "Ceres - Sistema de Gestão agroempresarial",
       description: "Plataforma completa para gestão de empresas com módulos de CRM, financeiro e recursos humanos.",
       image: portfolioImage,
       technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
