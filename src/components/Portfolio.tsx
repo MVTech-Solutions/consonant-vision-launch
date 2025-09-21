@@ -8,7 +8,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Ceres - Sistema de Gestão Agroempresarial",
-      description: "Plataforma completa para gestão de empresas com módulos de CRM, financeiro e recursos humanos.",
+      description: "Plataforma completa para gestão de produção com módulos financeiro e recursos humanos.",
       image: portfolioImage,
       technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
       results: [
