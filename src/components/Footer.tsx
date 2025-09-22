@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import logo from "@/assets/consonant-logo.png";
 import { Mail, Phone, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
 
 const Footer = () => {
@@ -37,7 +38,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4 flex space-x-3">
+                <img src={logo} width={30} height={30} className="mr-4"/>
                 Consonant Solutions
               </h3>
               <p className="text-blue-200 text-lg leading-relaxed">
@@ -51,15 +53,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-blue-200">contato@consonantsolutions.com</span>
+                <span className="text-blue-200">contato@consonantsolutions.com.br</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-blue-200">+55 (11) 9999-9999</span>
+                <span className="text-blue-200">+55 (73) 98199-9231</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-blue-200">São Paulo, SP - Brasil</span>
+                <span className="text-blue-200">Vitória da Conquista, BA - Brasil</span>
               </div>
             </div>
 

@@ -15,8 +15,7 @@ const Portfolio = () => {
       technologies: ["React", ".NET", "PostgreSQL", "AWS"],
       results: [
         "40% redução no tempo de processos",
-        "Aumento de 60% na produtividade",
-        "ROI de 300% em 12 meses"
+        "Aumento de 35% na produtividade"
       ],
       category: "SaaS"
     },
@@ -27,23 +26,11 @@ const Portfolio = () => {
       technologies: ["React", "NestJs", "PostgreSQL", "Docker"],
       results: [
         "50% de aumento nos agendamentos",
-        "25% economia de energia",
+        "Redução de 85% no tempo de espera",
         "Monitoramento 24/7"
       ],
       category: "Automação"
     },
-    {
-      title: "E-commerce B2B Personalizado",
-      description: "Plataforma de e-commerce B2B com funcionalidades avançadas de gestão de pedidos e clientes.",
-      image: portfolioImage,
-      technologies: ["Vue.js", "NestJs", "PostgreSQL", "Redis"],
-      results: [
-        "150% aumento nas vendas",
-        "50% redução no tempo de pedidos",
-        "Satisfação de 95% dos usuários"
-      ],
-      category: "E-commerce"
-    }
   ];
 
   return (

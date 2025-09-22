@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/consonant-blue-logo.png";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
@@ -19,7 +20,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">
+            <h1 className="text-2xl font-bold text-primary flex">
+              <img src={logo} width={30} className="mr-4"/>
               Consonant Solutions
             </h1>
           </div>

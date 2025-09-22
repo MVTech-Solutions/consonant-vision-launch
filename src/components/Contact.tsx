@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { Select } from "@/components/ui/select";
 import { 
   Mail, 
   Phone, 
@@ -21,20 +22,34 @@ const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     company: "",
     phone: "",
     subject: "",
     message: ""
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
+
+  const sendMessage = () => {
+    const { name, company, subject, message } = formData;
+    if (!name || !subject || !message) {
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Por favor, preencha todos os campos obrigatórios.",
+      });
+      return;
+    }
+
+    const fullMessage = `Olá, meu nome é ${name}. ${company ? `Represento a empresa ${company}. ` : ""}\nGostaria de falar sobre: ${subject}. \nMensagem: ${message}`;
+    // Logic to send message via WhatsApp or other means
+    window.open(`https://wa.me/5573991721922?text=${fullMessage}`, '_blank');
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,7 +63,6 @@ const Contact = () => {
     // Reset form
     setFormData({
       name: "",
-      email: "",
       company: "",
       phone: "",
       subject: "",
@@ -60,19 +74,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "contato@consonantsolutions.com",
+      value: "contato@consonantsolutions.com.br",
       description: "Resposta em até 24h"
     },
     {
       icon: Phone,
       title: "Telefone",
-      value: "+55 (11) 9999-9999",
+      value: "+55 (73) 98199-9231",
       description: "Seg-Sex: 9h às 18h"
     },
     {
       icon: MapPin,
       title: "Localização",
-      value: "São Paulo, SP",
+      value: "Vitória da Conquista, BA",
       description: "Atendimento presencial ou remoto"
     },
     {
@@ -126,18 +140,6 @@ const Contact = () => {
                         required
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="seu@email.com"
-                        required
-                      />
-                    </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
@@ -151,28 +153,18 @@ const Contact = () => {
                         placeholder="Nome da empresa"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Telefone</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="(11) 99999-9999"
-                      />
-                    </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="subject">Assunto *</Label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="Como podemos ajudar?"
-                      required
-                    />
+                    <select name="subject" value={formData.subject} onChange={event => handleInputChange(event)} required>
+                      <option value="">Selecione um assunto</option>
+                      <option value="Contratação de Saas">Contratação de SaaS</option>
+                      <option value="Automação de processos">Automação de processos</option>
+                      <option value="Desenvolvimento de sistema sob medida">Desenvolvimento de sistema sob medida</option>
+                      <option value="Consultoria especializada">Consultoria especializada</option>
+                      <option value="Outros">Outros</option>
+                    </select>
                   </div>
 
                   <div className="space-y-2">
@@ -193,6 +185,7 @@ const Contact = () => {
                     size="lg" 
                     variant="hero"
                     className="w-full group"
+                    onClick={sendMessage}
                   >
                     Enviar Mensagem
                     <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -242,24 +235,6 @@ const Contact = () => {
                 })}
               </div>
             </div>
-
-            {/* CTA Card */}
-            <Card className="bg-gradient-primary text-white border-0">
-              <CardContent className="p-6 text-center space-y-4">
-                <h4 className="text-xl font-semibold">
-                  Precisa de uma resposta rápida?
-                </h4>
-                <p className="text-blue-100">
-                  Entre em contato via WhatsApp para atendimento imediato.
-                </p>
-                <Button 
-                  variant="outline-white"
-                >
-                  <MessageSquare className="mr-2 h-4 w-4" />
-                  WhatsApp
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
