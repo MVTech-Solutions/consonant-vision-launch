@@ -17,6 +17,8 @@ import {
   Facebook,
   Youtube
 } from "lucide-react";
+import { SelectGroup } from "@radix-ui/react-select";
+import { SubjectSelect } from "./SubjectSelect";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -36,6 +38,13 @@ const Contact = () => {
     }));
   };
 
+  const handleSelectChange = (name: string, value: string) => {
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
+
   const sendMessage = () => {
     const { name, company, subject, message } = formData;
     if (!name || !subject || !message) {
@@ -48,7 +57,8 @@ const Contact = () => {
 
     const fullMessage = `Olá, meu nome é ${name}. ${company ? `Represento a empresa ${company}. ` : ""}\nGostaria de falar sobre: ${subject}. \nMensagem: ${message}`;
     // Logic to send message via WhatsApp or other means
-    window.open(`https://wa.me/5573991721922?text=${fullMessage}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=5573981999231&text=${fullMessage}`, '_blank');
+    
   }
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -156,15 +166,14 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Assunto *</Label>
-                    <select name="subject" value={formData.subject} onChange={event => handleInputChange(event)} required>
-                      <option value="">Selecione um assunto</option>
-                      <option value="Contratação de Saas">Contratação de SaaS</option>
-                      <option value="Automação de processos">Automação de processos</option>
-                      <option value="Desenvolvimento de sistema sob medida">Desenvolvimento de sistema sob medida</option>
-                      <option value="Consultoria especializada">Consultoria especializada</option>
-                      <option value="Outros">Outros</option>
-                    </select>
+                    <SelectGroup>
+                      <Label htmlFor="subject">Assunto *</Label>
+                      <SubjectSelect
+                        value={formData.subject}
+                        onChange={(val) => handleSelectChange("subject", val)}
+                      />
+                    </SelectGroup>
+                    
                   </div>
 
                   <div className="space-y-2">
