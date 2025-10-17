@@ -2,11 +2,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Code, Users, TrendingUp } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import portfolioImage from "@/assets/portfolio-saas.jpg";
 import cornPlantation from "@/assets/corn-plantation.jpg";
 import clinicFrontdesk from "@/assets/clinic-frontdesk.jpg";
 
 const Portfolio = () => {
+  const navigate = useNavigate();
+
   const projects = [
     {
       title: "Ceres - Sistema de Gestão Agroempresarial",
@@ -17,7 +20,8 @@ const Portfolio = () => {
         "40% redução no tempo de processos",
         "Aumento de 35% na produtividade"
       ],
-      category: "SaaS"
+      category: "SaaS",
+      route: "/ceres"
     },
     {
       title: "AgendaClin - Sistema de Gestão de Agenda Clinica",
@@ -29,7 +33,8 @@ const Portfolio = () => {
         "Redução de 85% no tempo de espera",
         "Monitoramento 24/7"
       ],
-      category: "Automação"
+      category: "Automação",
+      route: "/agenda-clin"
     },
   ];
 
@@ -103,9 +108,10 @@ const Portfolio = () => {
                        </ul>
                     </div>
 
-                    <Button 
+                    <Button
                       variant="outline-white"
                       className="w-fit"
+                      onClick={() => navigate(project.route)}
                     >
                       Ver Detalhes
                       <ExternalLink className="ml-2 h-4 w-4" />
